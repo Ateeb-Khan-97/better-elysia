@@ -8,6 +8,15 @@ Better Elysia is an npm package that enhances the already fun and lightweight El
 npm install better-elysia
 ```
 
+IMPORTANT!
+
+Add these in your `tsconfig.json`
+
+```
+"emitDecoratorMetadata": true,
+"experimentalDecorators": true,
+```
+
 To bootstrap the application
 
 # Bootstrap
@@ -37,8 +46,10 @@ bootstrap();
 ```
 import { Module } from 'better-elysia';
 
+// ADD YOUR CONTROLLERS HERE
 @Module({ controllers: [] })
 export class AppModule {}
+
 ```
 
 Add your controllers here
