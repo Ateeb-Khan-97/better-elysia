@@ -138,6 +138,8 @@ export class AuthController {
 }
 ```
 
+# Streaming
+
 For streaming use `GeneratorFunctions`
 
 **Example:**
@@ -156,6 +158,8 @@ export class AuthController {
 	}
 }
 ```
+
+# Public
 
 To make endpoint public and not use auth middleware passed in `ElysiaFactory` use @Public Decorator
 
