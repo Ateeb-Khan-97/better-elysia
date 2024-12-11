@@ -10,12 +10,21 @@ npm install better-elysia
 
 To bootstrap the application
 
+# Bootstrap
+
 ```
 import { ElysiaFactory, LoggerService } from 'better-elysia';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-	const app = await ElysiaFactory.create(AppModule);
+	const app = await ElysiaFactory.create(AppModule, {
+		auth: () => {}, // ADD YOUR AUTH HANDLER HERE,
+		response: () => {}, // ADD YOUR RESPONSE HANDLER HERE
+		error: () => {}, // ADD YOUR ERROR HANDLER HERE
+		cors: { origin: '*' }, // ADD YOUR CORS CONFIG HERE (it's optional if not passed application won't use cors)
+		swagger: { provider: 'swagger-ui' }, // ADD YOUR SWAGGER CONFIG HERE (it's optional if not passed application won't use swagger)
+		beforeStart: [], // ADD all functions you want to run before application starts (example connecting to database)
+	});
 
 	app.listen(5000, () => LoggerService.log('Application started at http://localhost:5000'));
 }
