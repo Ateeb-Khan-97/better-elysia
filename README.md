@@ -58,7 +58,7 @@ export class AppModule {}
 
 # Controller
 
-Example:
+**Example:**
 
 ```
 import { ApiTag, Controller, Get, Post } from 'better-elysia';
@@ -73,7 +73,8 @@ export class AuthController {
 
 To use validation you can use validator provided by elysia, here's how i do this
 Create a schema file auth.schema.ts
-Example:
+
+**Example:**
 
 ```
 import { t } from 'better-elysia';
@@ -88,7 +89,8 @@ export namespace AuthSchema {
 ```
 
 and use it in the controller
-Example:
+
+**Example:**
 
 ```
 import { ApiTag, Body, Controller, Post } from 'better-elysia';
@@ -103,7 +105,8 @@ export class AuthController {
 ```
 
 Same works for query too
-Example:
+
+**Example:**
 
 ```
 import { ApiTag, Controller, Post, Query } from 'better-elysia';
@@ -118,7 +121,8 @@ export class AuthController {
 ```
 
 For params
-Example:
+
+**Example:**
 
 ```
 import { ApiTag, Controller, Get, Param } from 'better-elysia';
@@ -134,7 +138,9 @@ export class AuthController {
 ```
 
 For streaming use `GeneratorFunctions`
-Example:
+
+**Example:**
+
 This will stream numbers from 0 to 9999
 
 ```
@@ -151,7 +157,8 @@ export class AuthController {
 ```
 
 To make endpoint public and not use auth middleware passed in `ElysiaFactory` use @Public Decorator
-Example:
+
+**Example:**
 
 ```
 import { ApiTag, Controller, Get, Public } from 'better-elysia';
@@ -168,7 +175,8 @@ export class AuthController {
 # Websocket
 
 For implementation of websocket use @Websocket decorator
-Example:
+
+**Example:**
 
 ```
 import { Close, Message, Open, t, Websocket, LoggerService, type WS } from 'better-elysia';
@@ -204,7 +212,8 @@ export class ChatWebsocket {
 
 For making services use @Service decorator
 what it will do is make a singleton of the class and inject the singleton to all the @Controller and @Websocket
-Example:
+
+**Example:**
 
 ```
 import { Service } from 'better-elysia';
@@ -218,6 +227,8 @@ export class UserService {
 ```
 
 Now use it anywhere
+
+**Example:**
 
 ```
 import { ApiTag, Controller, Get } from 'better-elysia';
@@ -270,7 +281,7 @@ export class ChatWebsocket {
 
 To make your own custom parameter decorator use `createCustomParameterDecorator` function
 
-UseCase and Example:
+**UseCase and Example:**
 
 ```
 import { createCustomParameterDecorator, type Handler } from 'better-elysia';
@@ -286,6 +297,8 @@ export const CurrentUser = () => {
 ```
 
 Add you `AuthHandler` in `ElysiaFactory`
+
+**Example:**
 
 ```
 import { ElysiaFactory, LoggerService } from 'better-elysia';
@@ -304,6 +317,8 @@ bootstrap();
 ```
 
 and the custom decorator you just create in Controller
+
+**Example:**
 
 ```
 import { ApiTag, Controller, Get } from 'better-elysia';
