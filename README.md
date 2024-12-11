@@ -72,7 +72,8 @@ export class AuthController {
 ```
 
 To use validation you can use validator provided by elysia, here's how i do this
-Create a schema file auth.schema.ts
+
+Create a schema file `auth.schema.ts`
 
 **Example:**
 
