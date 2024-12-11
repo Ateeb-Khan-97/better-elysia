@@ -1,15 +1,15 @@
-# best
+# Better Elysia
 
-To install dependencies:
+Elysia Decorators is an npm package that enhances the already fun and lightweight Elysia.js framework by introducing powerful decorators to simplify and streamline your development process. With this package, you can enjoy a more expressive and organized way to define routes, middleware, and more, making your Elysia.js experience even more enjoyable and productive.
 
-```bash
-bun install
-```
-
-To run:
+## Installation
 
 ```bash
-bun run index.ts
+npm install better-elysia
 ```
 
-This project was created using `bun init` in bun v1.1.38. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+To bootstrap the application
+
+# License
+
+This project is licensed under the MIT License
