@@ -23,6 +23,17 @@ async function bootstrap() {
 bootstrap();
 ```
 
+# AppModule
+
+```
+import { Module } from 'better-elysia';
+
+@Module({ controllers: [] })
+export class AppModule {}
+```
+
+Add your controllers here
+
 # License
 
 This project is licensed under the MIT License
