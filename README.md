@@ -266,7 +266,9 @@ export class ChatWebsocket {
 }
 ```
 
-To make your own custom parameter decorator use `createCustomParameterDecorator` function
+# Custom Decorator
+
+To make your own custom parameter decorator use `createCustomParameterDecorator` function\n
 UseCase and Example:
 
 ```
