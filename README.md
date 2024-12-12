@@ -5,7 +5,7 @@ Better Elysia is an npm package that enhances the already fun and lightweight El
 ## Installation
 
 ```bash
-npm install better-elysia
+bun add better-elysia
 ```
 
 IMPORTANT!
