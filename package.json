@@ -1,11 +1,15 @@
 {
   "name": "better-elysia",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "description": "An extended version of Elysia with decorators and more features",
   "author": {
     "name": "Ateeb Khan",
     "email": "ateebkhan997@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ateeb-Khan-97/better-elysia"
   },
   "main": "index.ts",
   "module": "index.ts",
