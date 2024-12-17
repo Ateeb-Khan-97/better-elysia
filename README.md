@@ -10,6 +10,8 @@ bun add better-elysia
 
 IMPORTANT!
 
+This package only works with bun runtime (Node and deno will not work)
+
 Add these in your `tsconfig.json`
 
 ```
