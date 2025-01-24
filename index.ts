@@ -1,6 +1,5 @@
 import 'reflect-metadata';
 
-import type { ServerWebSocket } from 'bun';
 import colors from 'colors';
 import {
 	t,
@@ -11,8 +10,6 @@ import {
 	type Handler,
 	type HTTPMethod,
 	type MaybeArray,
-	type RouteSchema,
-	type SingletonBase,
 	type TSchema,
 } from 'elysia';
 import type { ElysiaWS } from 'elysia/ws';
@@ -51,11 +48,7 @@ type Metadata = {
 	isPublic?: true;
 	customDecorators: { handler: Handler; index: number }[];
 };
-type WS = ElysiaWS<
-	ServerWebSocket<{ id?: string; validator?: undefined }>,
-	RouteSchema,
-	{ store: { user?: number } } & SingletonBase
->;
+type WS = ElysiaWS;
 type CORSConfig = {
 	aot?: boolean;
 	origin?: Origin | boolean | Origin[];
