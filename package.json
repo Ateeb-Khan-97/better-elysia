@@ -1,35 +1,35 @@
 {
-  "name": "better-elysia",
-  "version": "1.0.6",
-  "license": "MIT",
-  "description": "An extended version of Elysia with decorators and more features",
-  "author": {
-    "name": "Ateeb Khan",
-    "email": "ateebkhan997@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Ateeb-Khan-97/better-elysia"
-  },
-  "main": "index.ts",
-  "module": "index.ts",
-  "type": "module",
-  "scripts": {
-    "build": "bun build index.ts --outdir best-js --minify",
-    "dev": "bun --watch index.ts"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@types/bun": "^1.1.14"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "@elysiajs/cors": "^1.2.0",
-    "@elysiajs/swagger": "^1.2.0",
-    "colors": "^1.4.0",
-    "elysia": "^1.2.10",
-    "reflect-metadata": "^0.2.2"
-  }
+	"name": "better-elysia",
+	"version": "1.0.7",
+	"license": "MIT",
+	"description": "An extended version of Elysia with decorators and more features",
+	"author": {
+		"name": "Ateeb Khan",
+		"email": "ateebkhan997@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Ateeb-Khan-97/better-elysia"
+	},
+	"main": "index.ts",
+	"module": "index.ts",
+	"type": "module",
+	"scripts": {
+		"build": "bun build index.ts --outdir best-js --minify",
+		"dev": "bun --watch index.ts"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/bun": "^1.1.14"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"@elysiajs/cors": "^1.1.1",
+		"@elysiajs/swagger": "^1.1.6",
+		"colors": "^1.4.0",
+		"elysia": "^1.1.26",
+		"reflect-metadata": "^0.2.2"
+	}
 }
