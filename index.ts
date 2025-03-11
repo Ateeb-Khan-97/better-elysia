@@ -28,6 +28,7 @@ type ElysiaCreateOptions<T> = {
 	auth?: Handler;
 	response?: AfterHandler;
 	error?: ErrorHandler<any, any>;
+	plugins?: ((app: Elysia)=>Elysia)[];
 	beforeStart?: fc[];
 };
 type HttpMethods = 'get' | 'post' | 'put' | 'delete' | 'patch';
@@ -71,7 +72,7 @@ export type {
 };
 
 //! LOGGER SERVICE
-function createLogger(serviceName = 'BestApplication') {
+function createLogger(serviceName = 'ElysiaApplication') {
 	function messageParser(message: unknown) {
 		if (typeof message !== 'string') return JSON.stringify(message);
 		return message;
@@ -157,6 +158,8 @@ const ElysiaFactory = {
 			app.use(cors(typeof options.cors === 'object' ? options.cors : {}));
 		}
 
+		if(options?.plugins) options.plugins.forEach(app.use)
+			
 		// SWAGGER SETTING
 		if (options?.swagger) {
 			app.use(swagger(typeof options.swagger === 'object' ? options.swagger : {}));
