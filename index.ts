@@ -28,7 +28,7 @@ type ElysiaCreateOptions<T> = {
 	auth?: Handler;
 	response?: AfterHandler;
 	error?: ErrorHandler<any, any>;
-	plugins?: ((app: Elysia)=>Elysia)[];
+	plugins?: ((app: Elysia) => Elysia)[];
 	beforeStart?: fc[];
 };
 type HttpMethods = 'get' | 'post' | 'put' | 'delete' | 'patch';
@@ -158,8 +158,8 @@ const ElysiaFactory = {
 			app.use(cors(typeof options.cors === 'object' ? options.cors : {}));
 		}
 
-		if(options?.plugins) options.plugins.forEach(app.use)
-			
+		if (options?.plugins) options.plugins.forEach(app.use);
+
 		// SWAGGER SETTING
 		if (options?.swagger) {
 			app.use(swagger(typeof options.swagger === 'object' ? options.swagger : {}));
