@@ -1,6 +1,6 @@
 {
 	"name": "better-elysia",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"license": "MIT",
 	"description": "An extended version of Elysia with decorators and more features",
 	"author": {
