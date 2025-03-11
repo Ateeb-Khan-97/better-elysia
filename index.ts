@@ -158,7 +158,7 @@ const ElysiaFactory = {
 			app.use(cors(typeof options.cors === 'object' ? options.cors : {}));
 		}
 
-		if (options?.plugins) options.plugins.forEach(app.use);
+		if (options?.plugins) for (const plugin of options.plugins) app.use(plugin);
 
 		// SWAGGER SETTING
 		if (options?.swagger) {
@@ -625,7 +625,7 @@ const HttpStatus = {
 	LOOP_DETECTED_MESSAGE: 'Loop Detected',
 	NOT_EXTENDED_MESSAGE: 'Not Extended',
 	NETWORK_AUTHENTICATION_REQUIRED_MESSAGE: 'Network Authentication Required',
-};
+} as const;
 
 export class HttpException extends Error implements IHttpException {
 	status: number;
